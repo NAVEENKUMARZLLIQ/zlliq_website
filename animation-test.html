@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Test - ZlliQ Technology</title>
+    <script src="https://cdn.tailwindcss.com?v=3.4.0"></script>
+    <style>
+        /* Enhanced keyframes with webkit prefixes */
+        @keyframes gradient {
+            0%, 100% { 
+                background-position: 0% 50%; 
+                -webkit-background-position: 0% 50%;
+            }
+            50% { 
+                background-position: 100% 50%; 
+                -webkit-background-position: 100% 50%;
+            }
+        }
+        
+        @-webkit-keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes spin {
+            from { 
+                transform: rotate(0deg); 
+                -webkit-transform: rotate(0deg);
+            }
+            to { 
+                transform: rotate(360deg); 
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        @-webkit-keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px); 
+                -webkit-transform: translateY(0px);
+            }
+            50% { 
+                transform: translateY(-20px); 
+                -webkit-transform: translateY(-20px);
+            }
+        }
+        
+        @-webkit-keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        @-webkit-keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+                -webkit-transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                -webkit-transform: translateY(0);
+            }
+        }
+        
+        @-webkit-keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+                -webkit-transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+                -webkit-transform: translateX(0);
+            }
+        }
+        
+        @-webkit-keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        body {
+            background: #000000 !important;
+            color: #ffffff !important;
+        }
+        
+        .test-animation {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #374151;
+            border-radius: 10px;
+            background: rgba(17, 24, 39, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-center mb-8" style="color: #ffffff !important;">Animation Test Page</h1>
+        
+        <!-- Gradient Animation Test -->
+        <div class="test-animation">
+            <h2 style="color: #ffffff !important;">1. Gradient Text Animation</h2>
+            <div style="background: linear-gradient(to right, #c084fc, #f472b6, #60a5fa) !important; background-size: 200% 200% !important; -webkit-background-clip: text !important; background-clip: text !important; -webkit-text-fill-color: transparent !important; color: transparent !important; animation: gradient 3s ease infinite; -webkit-animation: gradient 3s ease infinite; font-size: 2rem; font-weight: bold;">
+                Animated Gradient Text
+            </div>
+        </div>
+        
+        <!-- Floating Elements Test -->
+        <div class="test-animation">
+            <h2 style="color: #ffffff !important;">2. Float Animation</h2>
+            <div style="width: 100px; height: 100px; background: rgba(168, 85, 247, 0.5); border-radius: 50%; animation: float 3s ease-in-out infinite; -webkit-animation: float 3s ease-in-out infinite; margin: 20px auto;"></div>
+        </div>
+        
+        <!-- Spinning Element Test -->
+        <div class="test-animation">
+            <h2 style="color: #ffffff !important;">3. Spin Animation</h2>
+            <div style="width: 80px; height: 80px; border: 4px solid rgba(59, 130, 246, 0.3); border-top: 4px solid #3b82f6; border-radius: 50%; animation: spin 2s linear infinite; -webkit-animation: spin 2s linear infinite; margin: 20px auto;"></div>
+        </div>
+        
+        <!-- Pulse Animation Test -->
+        <div class="test-animation">
+            <h2 style="color: #ffffff !important;">4. Pulse Animation</h2>
+            <div style="padding: 20px; background: rgba(59, 130, 246, 0.3); border-radius: 10px; animation: pulse 2s ease-in-out infinite; -webkit-animation: pulse 2s ease-in-out infinite; text-align: center; color: #ffffff;">
+                Pulsing Element
+            </div>
+        </div>
+        
+        <!-- Fade In Up Test -->
+        <div class="test-animation">
+            <h2 style="color: #ffffff !important;">5. Fade In Up Animation</h2>
+            <div style="padding: 20px; background: rgba(168, 85, 247, 0.3); border-radius: 10px; animation: fadeInUp 1s ease-out; -webkit-animation: fadeInUp 1s ease-out; text-align: center; color: #ffffff;">
+                Fade In Up Element
+            </div>
+        </div>
+        
+        <!-- Slide In Left Test -->
+        <div class="test-animation">
+            <h2 style="color: #ffffff !important;">6. Slide In Left Animation</h2>
+            <div style="padding: 20px; background: rgba(34, 197, 94, 0.3); border-radius: 10px; animation: slideInLeft 1s ease-out; -webkit-animation: slideInLeft 1s ease-out; text-align: center; color: #ffffff;">
+                Slide In Left Element
+            </div>
+        </div>
+        
+        <!-- Hover Scale Test -->
+        <div class="test-animation">
+            <h2 style="color: #ffffff !important;">7. Hover Scale Animation</h2>
+            <div style="padding: 20px; background: rgba(239, 68, 68, 0.3); border-radius: 10px; text-align: center; color: #ffffff; transition: transform 0.3s ease; -webkit-transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'; this.style.webkitTransform='scale(1.1)';" onmouseout="this.style.transform='scale(1)'; this.style.webkitTransform='scale(1)';">
+                Hover to Scale (Hover Me!)
+            </div>
+        </div>
+        
+        <!-- Combined Animation Test -->
+        <div class="test-animation">
+            <h2 style="color: #ffffff !important;">8. Combined Animations</h2>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <div style="width: 80px; height: 80px; background: rgba(168, 85, 247, 0.5); border-radius: 50%; animation: float 3s ease-in-out infinite, pulse 2s ease-in-out infinite; -webkit-animation: float 3s ease-in-out infinite, pulse 2s ease-in-out infinite;"></div>
+                <div style="width: 80px; height: 80px; background: rgba(59, 130, 246, 0.5); border-radius: 50%; animation: float 3s ease-in-out infinite, spin 4s linear infinite; -webkit-animation: float 3s ease-in-out infinite, spin 4s linear infinite; animation-delay: 0.5s; -webkit-animation-delay: 0.5s;"></div>
+                <div style="width: 80px; height: 80px; background: rgba(34, 197, 94, 0.5); border-radius: 50%; animation: float 3s ease-in-out infinite, pulse 2s ease-in-out infinite; -webkit-animation: float 3s ease-in-out infinite, pulse 2s ease-in-out infinite; animation-delay: 1s; -webkit-animation-delay: 1s;"></div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8">
+            <p style="color: #9ca3af !important;">If you can see all animations working smoothly, the animation system is functioning correctly!</p>
+            <button onclick="location.href='home-page.php'" style="margin-top: 20px; padding: 12px 24px; background: linear-gradient(to right, #9333ea, #2563eb); color: white; border: none; border-radius: 8px; cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                Back to Website
+            </button>
+        </div>
+    </div>
+</body>
+</html>
